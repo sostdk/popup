@@ -50,15 +50,15 @@
 
 $( document ).ready(function() {
 
-  var visited = $.cookie("visited")
+  var toggled = $.cookie("toggled")
 
-    if (visited == null) {
-        $('.newsletter_layer').show();
+    if (toggled== null) {
+    
         alert($.cookie("visited"));
     }
 
     // set cookie
-    $.cookie('visited', 'yes', { expires: 1, path: '/' });
+
 
   /*function CheckCookies(){
       if ($.cookie("signupcookie") === "Accepted")
@@ -70,7 +70,7 @@ $( document ).ready(function() {
 
 
   $( "#signupToggle" ).click(function(e) { //(e) for non rep. & start animation
-
+    $.cookie('toggled', '1', { expires: 1, path: '/' });
     $( "#signupToggled" ).slideToggle( "fast", function() { /*Animation Done*/ });
     $(this).toggleClass('is-active'); //Replacing the X with an actual container
   });
