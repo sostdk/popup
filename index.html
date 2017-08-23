@@ -56,6 +56,8 @@ $( document ).ready(function() {
       alert($.cookie("toggled"));
     }else{
       alert($.cookie("toggled"));
+      $( "#signupToggled" ).slideToggle( "fast", function() { /*Animation Done*/ });
+      $( "#signupToggle" ).toggleClass('is-active');
     }
 
     // set cookie
