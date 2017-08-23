@@ -52,28 +52,16 @@ $( document ).ready(function() {
 
   var toggled = $.cookie("toggled")
 
-    if (toggled== null) {
-      alert($.cookie("toggled"));
+    if (toggled == null) {
+      $( "#signupToggled" ).show();
     }else{
       alert($.cookie("toggled"));
       $( "#signupToggled" ).hide();
       $( "#signupToggle" ).toggleClass('is-active');
     }
 
-    // set cookie
-
-
-  /*function CheckCookies(){
-      if ($.cookie("signupcookie") === "Accepted")
-      {
-          $("#signupToggled").hide();
-      }
-  }*/
-
-
-
   $( "#signupToggle" ).click(function(e) { //(e) for non rep. & start animation
-    $.cookie('toggled', '1', { expires: 1, path: '/' });
+    $.cookie('toggled', '1', { expires: 7, path: '/' });
     $( "#signupToggled" ).slideToggle( "fast", function() { /*Animation Done*/ });
     $(this).toggleClass('is-active'); //Replacing the X with an actual container
   });
